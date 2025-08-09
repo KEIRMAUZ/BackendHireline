@@ -7,6 +7,8 @@ async function realizarScraping(terminoBusqueda) {
         const navegador = await puppeteer.launch({
             headless: true, // Cambiar a headless para mejor rendimiento
             slowMo: 100, // Reducir el delay
+            // 🚨 ¡Añade esta línea para solucionar el error de Puppeteer en Render!
+            executablePath: '/usr/bin/google-chrome',
             args: [
                 '--no-sandbox', 
                 '--disable-setuid-sandbox', 
