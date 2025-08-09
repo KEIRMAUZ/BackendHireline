@@ -8,7 +8,7 @@ async function realizarScraping(terminoBusqueda) {
             headless: true, // Cambiar a headless para mejor rendimiento
             slowMo: 100, // Reducir el delay
             // 🚨 ¡Añade esta línea para solucionar el error de Puppeteer en Render!
-            executablePath: '/usr/bin/google-chrome',
+            executablePath: './puppeteer-local/chrome',
             args: [
                 '--no-sandbox', 
                 '--disable-setuid-sandbox', 
